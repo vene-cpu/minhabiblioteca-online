@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #e0f7fa, #e1f5fe);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #004466;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            background-color: #004466;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #004466;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 10px;
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 900px;
+            width: 100%;
+            padding: 30px 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0277bd;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            grid-column: span 2;
+            resize: vertical;
+        }
+
+        button {
+            grid-column: span 2;
+            background-color: #0277bd;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #01579b;
+        }
+
+        .info {
+            margin-top: 30px;
+            background-color: #e1f5fe;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .info h3 {
+            color: #01579b;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            margin: 8px 0;
+        }
+
+        footer {
+            background-color: #004466;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+            box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 700px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+            textarea, button {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Entre em Contacto Connosco</h1>
+        <p>Teremos todo o prazer em responder às suas mensagens</p>
+    </header>
+
+    <nav>
+       <div style="background-color:#004466; color:white; padding:10px; text-align:center;">
+        <ul style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+           <li style="margin:0 15px;"><a href="index.html" style="color:white; text-decoration:none;">Início</a></li>
+           <li style="margin:0 15px;"><a href="Livros.html" style="color:white; text-decoration:none;">Livros</a></li>
+           <li style="margin:0 15px;"><a href="video.html" style="color:white; text-decoration:none;">Vídeo</a></li>
+           <li style="margin:0 15px;"><a href="livros didaticos.html" style="color:white; text-decoration:none;">Livros Didáticos</a></li>
+           <li style="margin:0 15px;"><a href="sobre.html" style="color:white; text-decoration:none;">Sobre</a></li>
+           <li style="margin:0 15px;"><a href="contacto.html" style="color:white; text-decoration:none;">Contacto</a></li>
+        </ul>
+    </div>
+     </nav>
+
+    <main>
+        <div class="contact-card">
+            <h2>Formulário de Contacto</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div>
+                    <label for="assunto">Assunto</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Motivo do contato" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="+258 84 000 0000">
+                </div>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+
+            <div class="info">
+                <h3>Informações de Contato</h3>
+                <p><strong>Endereço:</strong> Av. da Liberdade, Tete, Moçambique</p>
+                <p><strong>Telefone:</strong> +258 84 000 0000</p>
+                <p><strong>E-mail:</strong> contacto@seudominio.com</p>
+                <p><strong>Horário:</strong> Segunda a Sexta, das 8h às 17h</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Rede Educacional | Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>

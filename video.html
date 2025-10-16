@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Vídeos - Projeto Escolar</title>
+
+  <style>
+    /* ======== ESTILOS GERAIS ======== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* ======== MENU DE NAVEGAÇÃO ======== */
+    nav {
+      background-color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #00bcd4;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu li {
+      margin-left: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: #00bcd4;
+    }
+
+    /* ======== CONTEÚDO PRINCIPAL ======== */
+    main {
+      margin-top: 70px; /* espaço abaixo do menu fixo */
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ======== RODAPÉ ======== */
+    footer {
+      background-color: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    /* ======== MENU RESPONSIVO ======== */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu {
+        flex-direction: column;
+        width: 100%;
+      }
+      .menu li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======== MENU SUPERIOR ======== -->
+  <nav>
+    <div style="background-color:#004466; color:white; padding:10px; text-align:center;">
+        <ul style="list-style-type:none; margin:0; padding:0; display:flex; justify-content:center;">
+            <li style="margin:0 15px;"><a href="index.html" style="color:white; text-decoration:none;">Início</a></li>
+            <li style="margin:0 15px;"><a href="Livros.html" style="color:white; text-decoration:none;">Livros</a></li>
+            <li style="margin:0 15px;"><a href="video.html" style="color:white; text-decoration:none;">Vídeo</a></li>
+            <a href="livros didaticos.html" style="color:white; text-decoration:none; margin: 0 15px;">Livros Didáticos</a>
+            <li style="margin:0 15px;"><a href="sobre.html" style="color:white; text-decoration:none;">Sobre</a></li>
+            <li style="margin:0 15px;"><a href="contacto.html" style="color:white; text-decoration:none;">Contacto</a></li>
+        </ul>
+  </nav>
+
+  <main>
+    <h1 style="text-align:center; margin:20px 0; font-size:24px;">Plataforma de Vídeos Educativos</h1>
+
+    <div class="iframe-container">
+      <iframe src="https://libreflix.org" allowfullscreen></iframe>
+    </div>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Natasha John • Projeto de Programação Web © 2025</p>
+  </footer>
+</body>
+</html>
